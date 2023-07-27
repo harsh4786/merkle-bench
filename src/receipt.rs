@@ -1,9 +1,6 @@
 use rand::Rng;
 use solana_sdk::signature::Signature;
 
-
-
-
 #[derive(Debug)]
 pub struct Receipt{
    pub signature: Signature,
