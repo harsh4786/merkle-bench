@@ -1322,7 +1322,6 @@ dependencies = [
 name = "merkle-bench"
 version = "0.1.0"
 dependencies = [
- "blake3",
  "glassbench",
  "rand 0.8.5",
  "solana-merkle-tree",

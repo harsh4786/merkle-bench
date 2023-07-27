@@ -1,14 +1,11 @@
 use rand::Rng;
 use solana_sdk::signature::Signature;
-use solana_sdk::hash::hashv;
+
 #[derive(Debug)]
 pub struct Receipt{
    pub signature: Signature,
    pub status: u8
 }
-
-const LEAF_PREFIX: &[u8] = &[0];
-const INTERMEDIATE_PREFIX: &[u8] = &[1];
 
 impl Receipt{
    pub fn new_rand<R: Rng>(rng: &mut R) -> Self{
@@ -35,7 +32,6 @@ impl Receipt{
     } 
 }
 
-
 pub fn generate_random_array() -> [u8; 32] {
     let mut rng = rand::thread_rng();
     let mut array = [0u8; 32];
@@ -46,11 +42,3 @@ pub fn generate_random_array() -> [u8; 32] {
 
     array
 }
-
-
-// #[macro_export]
-// macro_rules! hash_leaf {
-//     {$d:ident} => {
-//         hashv(&[LEAF_PREFIX, $d])
-//     }
-// }
