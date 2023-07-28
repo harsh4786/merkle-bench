@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 use rand::Rng;
 use solana_sdk::signature::Signature;
 
